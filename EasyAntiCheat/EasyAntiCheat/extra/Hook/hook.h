@@ -8,11 +8,14 @@ public:
 	template<class HookEx>
 	HookEx* hkGameEngine(const uintptr_t moduleBase)
 	{
-		if (moduleBase)
+		while (true)
 		{
-			if (pWeapon->isPrimaryWeaponActive(moduleBase))
+			if (moduleBase)
 			{
-				pWeapon->ModifyPrimaryWeaponAmmoCount(moduleBase, 1024);
+				if (pWeapon->isPrimaryWeaponActive(moduleBase))
+				{
+					pWeapon->ModifyPrimaryWeaponAmmoCount(moduleBase, 1024);
+				}
 			}
 		}
 		return nullptr;

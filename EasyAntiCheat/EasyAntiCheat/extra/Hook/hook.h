@@ -21,7 +21,7 @@ public:
 	template<class HookEx>
 	HookEx* hkInterface(std::string title, int width, int height)
 	{
-		// being imgui here
+		// start imgui here
 		/*
 		
 		
